@@ -1,0 +1,75 @@
+.notes-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px 32px 32px 32px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.notes-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.note-input-field {
+  padding: 8px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.buttons {
+  padding: 8px 14px;
+  margin-left: 4px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 80px;          
+  min-width: 80px; 
+  flex-shrink: 0;
+}
+
+.buttons:hover {
+  background: #1565c0;
+}
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+}
+
+.notes-list-item {
+  background: #f1f1f1;
+  margin-bottom: 10px;
+  padding: 10px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.list-input-field {
+  width: 60%;
+  margin-right: 8px;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.list-buttons {
+  margin-left: 4px;
+  padding: 5px 10px;
+  font-size: 0.95rem;
+  width: 80px;    
+  min-width: 80px;
+  flex-shrink: 0;
+}
