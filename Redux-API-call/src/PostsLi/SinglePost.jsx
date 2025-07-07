@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams , Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 const SinglePost = () => {
     const { postId } = useParams();
@@ -11,8 +11,11 @@ const SinglePost = () => {
     <article className="post">
       <h2>{post.title}</h2>
       <p className="post-content">{post.content}</p>
+      <Link to={`/editPost/${post.id}`} className="button">
+        Edit Post
+      </Link>
     </article>
-  )
+  );
 }
 
 export default SinglePost
