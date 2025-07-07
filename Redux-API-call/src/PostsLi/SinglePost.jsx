@@ -1,12 +1,13 @@
-import React from 'react'
-import { useParams , Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectPostById } from "../redux/postsSlice";
 const SinglePost = () => {
-    const { postId } = useParams();
-    const post = useSelector((state) => state?.posts.find(post => post.id === postId));
-    if (!post) {
-        return <div>Post not found</div>;
-    }
+  const { postId } = useParams();
+  const post = useSelector((state)=>selectPostById(state, postId));
+  if (!post) {
+    return <div>Post not found</div>;
+  }
   return (
     <article className="post">
       <h2>{post.title}</h2>
@@ -16,6 +17,6 @@ const SinglePost = () => {
       </Link>
     </article>
   );
-}
+};
 
-export default SinglePost
+export default SinglePost;
